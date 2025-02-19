@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+* {
+	padding: 0;
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+body {
+	font-family: 'Press Start 2P', cursive;
+	font-size: 16px;
+}
+
+/*Бегущая корова*/
+.runningCow {
+	width: 100px;
+	position: fixed;
+	bottom: 0;
+	right: -100px;
+	animation: move 25s linear 1;
+	animation-delay: 300s;
+}
+@keyframes move {
+	from {right: -100px;}
+	to {right: 3000px;}
+}
+
+/*Общие стили кнопки*/
+
+.button {
+	width: 180px;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+	border: 2px dotted black;
+	display: block;
+	margin: 0 auto; 
+}
+.button:hover {
+	color: blue;
+}
+
+/*Начальный экран*/
+
+.splashScreen {
+	margin: 0 auto;
+	padding-top: 50px;
+	width: 440px;
+	text-align: center;
+}
+.rules {
+	width: 800px;
+	padding-top: 50px;
+	margin: 0 auto;
+	text-align: center;
+}
+.rules> p {
+	margin: 30px 0;
+}
+.continueButton {
+	width: 160px;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+	border: 2px dotted black;
+	display: block;
+	margin: 0 auto;
+}
+.continueButton:hover {
+	color: blue;
+}
+
+/*Поле для ввода имени игрока*/
+
+.newGame {
+	width: 300px;
+	margin: 0 auto;
+	padding: 30px;
+	text-align: center;
+	margin-top: 100px;
+}
+.playerNameField {
+	padding: 5px;
+	width: 160px;
+	margin: 30px 0;
+	border: none;
+	color: gray;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 16px;
+	text-align: left;
+}
+.playerNameField:focus {
+	outline: none;
+}
+.inputNotice {
+	color: red;
+	font-size: 10px;
+}
+
+/*Выбор режима игры*/
+
+.gameMode {
+	width: 400px;
+	margin: 0 auto;
+	padding: 30px;
+	text-align: center;
+}
+.botMode {
+	margin: 15px auto;
+}
+.netMode {
+	background-color: rgba(255, 0, 0, 0.4);
+	cursor: default;
+}
+.netMode:hover {
+	color: black;
+}
+
+/*Поле загадывания числа*/
+
+.setNumber {
+	width: 300px;
+	margin: 0 auto;
+	padding: 30px;
+	text-align: center;
+	margin-top: 100px;
+}
+.setNumber> p {
+	line-height: 23px;
+}
+.numberSetField {
+	padding: 5px;
+	width: 160px;
+	margin: 30px 0;
+	border: none;
+	color: gray;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 16px;
+	text-align: center;
+}
+.numberSetField:focus {
+	outline: none;
+}
+
+/*Игровое поле*/
+
+.wrapper {
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 700px;
+	height: 100%;
+	margin: 0 auto;
+}
+.gameFieldWrapper {
+	max-height: 440px;
+	overflow-y: scroll;
+}
+.gameField {
+	
+}
+table {
+	border-collapse: collapse;
+	width: 500px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+table tr {
+	height: 50px;
+}
+table td {
+	border: 2px dotted gray;
+	text-align: center;
+}
+table th {
+	border: 2px dotted gray;
+	padding: 10px;
+}
+
+/*Сделать ход*/
+
+.makeAMove {
+	margin: 0 auto;
+	width: 300px;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.inputNumber {
+	width: 73px;
+	height: 36px;
+	border: 2px dotted black;
+	color: gray;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 16px;
+	text-align: left;
+	padding-left: 10px;
+	margin-left: 10px;
+}
+.inputNumber:focus {
+	outline: none;
+}
+.makeAMoveButton {
+	width: 120px;
+	margin-left: 10px;
+}
+
+/*Инфо игрока*/
+
+.playerInfo {
+	width: 300px;
+	background-color: lightgray;
+	border: 2px dotted black;
+	border-bottom: none;
+	padding: 30px 10px;
+}
+
+/*Победное окно*/
+
+.win {
+	width: 586px;
+    padding: 80px;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -375px;
+	margin-top: -163px;
+	background-color: rgba(128, 128, 128, 0.9);
+	border: 2px dotted black;
+}
+.win > span {
+	font-size: 40px;
+	color: green;
+}
+.playAgainButton {
+	margin-top: 85px;
+}

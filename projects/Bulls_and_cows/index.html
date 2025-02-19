@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<script src="script/objects.js" defer></script>
+	<script src="script/function.js" defer></script>
+	<title>Bulls and Cows</title>
+</head>
+<body>
+	
+	<div class="wrapper">
+		<img class="runningCow" src="img/cow_animation.gif" alt="runningCow">
+	<!-- Игровое поле -->
+
+		<div class="gameFieldWrapper">
+				<table class="gameField"> 
+					<tr class="tableHeader">
+						<th>ход</th>
+						<th>число</th>
+						<th>быки</th>
+						<th>коровы</th>
+					</tr>
+					<tr class="row" hidden>
+						<td class="tryNumber">0</td>
+						<td class="number"></td>
+						<td class="bulls"></td>
+						<td class="cows"></td>
+					</tr>
+				</table>
+		</div>	
+
+	<!-- Сделать ход -->
+
+		<div class="makeAMove">
+			<p>Число</p><input class="inputNumber" type="text" minlength="4" maxlength="4">
+			<a class="button makeAMoveButton" href="#">Угадать</a>		
+		</div>
+
+	<!-- Визитка Игрока -->
+		
+		<div class="playerInfo">
+			<span class="playerName">Имя:</span><br><br>
+			<span class="winCount">Побед:</span>
+		</div>
+
+	<!-- Победное оповещение -->	
+		
+		<div class="win" hidden>
+			<span>Победа!</span>
+			<a class="button playAgainButton" href="#">Заново</a>
+		</div>
+
+	</div>	
+
+<!-- Заставка -->	
+		
+	<div class="splashScreen">
+		<h1>БЫКИ И КОРОВЫ</h1>
+		<img src="img/splashBull.png" alt="pic">
+		<a class="continueButton slpashCuntinueButton" href="#">Продолжить</a>
+	</div>
+
+<!-- Правила игры -->
+
+		<div class="rules" hidden>
+			<h2>Правила игры</h2>
+			<p>
+				Каждый из игроков задумывает тайное 4-значное число с неповторяющимися цифрами. Игрок, который начинает игру по жребию, делает первую попытку отгадать число. Попытка — это 4-значное число с неповторяющимися цифрами, сообщаемое противнику. Противник сообщает в ответ, сколько цифр угадано без совпадения с их позициями в тайном числе (то есть количество коров) и сколько угадано вплоть до позиции в тайном числе (то есть количество быков). Например:<br>
+
+				Задумано тайное число «3219».<br><br>
+
+				Попытка: «2310».<br><br>
+
+				Результат: две «коровы» (две цифры: «2» и «3» — угаданы на неверных позициях) и один «бык» (одна цифра «1» угадана вплоть до позиции).<br><br>
+
+				Игроки делают попытки угадать по очереди. Побеждает тот, кто угадает число первым, при условии, что он не начинал игру. Если же отгадавший начинал игру — его противнику предоставляется последний шанс угадать последовательность.
+			</p>
+			<a class="continueButton rulesContinueButton" href="#">Продолжить</a>
+		</div>
+
+<!-- Ввод имени пользователя -->
+
+		<div class="newGame" hidden>
+			<p>Введите Ваше имя или никнейм</p>
+			<span class="inputNotice" hidden>*без пробелов</span><br>
+			><input class="playerNameField" type="text" maxlength="10">
+			<a class="button submitNameButton" href="#">Подтвердить</a>
+		</div>
+
+<!-- Выбор режима игры -->
+
+		<div class="gameMode" hidden>
+			<p>Выберите режим игры</p>
+			<a class="button botMode" href="#">Компьютер</a>
+			<a class="button netMode" href="#">Игрок</a>
+		</div>
+
+<!-- Загадывание числа -->
+
+		<div class="setNumber" hidden>
+			<p>Придумайте 5-ти значное число<br>
+			 (по правилам игры)</p>
+			<input class="numberSetField" type="text" placeholder="-->  <--">
+			<a class="button submitNumberButton" href="#">Подтвердить</a>
+		</div>
+
+</body>
+</html>
