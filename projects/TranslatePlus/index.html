@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <title>Translate Plus | Переводы в короткие сроки</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/normalize_custom.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/script.js" defer></script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(47664385, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<!-- /Yandex.Metrika counter -->
+
+</head>
+<body>
+    <div class="backgroundWrapper">
+        <div class="wrapper">
+           <div class="fix">
+               <header>
+                <div class="name"><h1>Translate Plus</h1></div>
+                <div class="email"><a href="mailto:translatepluskz@gmail.com?subject=Вопрос">translatepluskz@gmail.com</a></div>
+                <div class="phone">+7 (777) 684-50-94<br>+7 (747) 555-80-46</div>
+            </header>
+            <section>
+                <?
+                    $current_day = date('N');
+                    switch($current_day) {
+                        case 1 : 
+                        case 2 : require('content/header_1.php');
+                        break;
+                        case 3 :
+                        case 4 : require('content/header_2.php');
+                        break;
+                        case 5 :
+                        case 6 :
+                        case 7 : require('content/header_3.php');
+                        break;
+                    }
+                ?>
+                <p>
+                    Мы работаем со следующими языками:<br>
+                    Казахский<br>
+                    Английский<br>
+                    Китайский<br>
+                </p>
+                <a class="order" type="submit" onclick="ym(47664385, 'reachGoal', 'target_press'); return true;">Оставить заявку</a>
+            </section>
+            <footer>
+                <span class="copyright">Copyright&copy;</span>
+            </footer>
+           </div>
+        </div>
+    </div>
+    <div class="modal">
+            <form>
+                <p>Поля отмеченные* обязательны для заполнения</p>
+                <p>Имя*</p>
+                <input type="text" name="name" required><br>
+                <p>Номер телефона*</p>        
+                <input type="tel" name="phone" required><br>
+                <p>Email</p>
+                <input type="email" name="email"><br>
+                <input class="sendButton" type="submit" onclick="ym(47664385, 'reachGoal', 'target_send'); return true;" value="Отправить">
+            </form>
+            <img class="close" src="img/close.svg" alt="pic">
+            <div class="sendSucces" hidden>
+                <p>Заявка отправлена<br>Мы свяжемся с Вами в ближайшее время</p>
+            </div>
+    </div>
+    <div class="overlay"></div>
+<!-- СчетчикS -->
+    <noscript><div><img src="https://mc.yandex.ru/watch/47664385" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+</body>
+</html>
