@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BMW E36 Coupe</title>
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<script src="script/script.js" defer></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main">
+			<div class="header">
+				<h1>BMW E36 Coupe</h1>
+				<div class="logo"></div>
+			</div>
+			<div class="progressVisual">
+				<div class="bmw">
+					<div id="cover" class="coverBMW"></div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="form">
+					<p>Сумма в копилку:</p>
+					<input id="field" class="field" type="text">
+					<a id="buttonAdd" class="button">Добавить</a>
+					<a id="cleanButton" class="cleanButton" href="#">Очистить</a>
+					<div class="alert">
+						<div id="alertNaN" class="invalidNaN">
+							<p>Введите сумму числами!</p>
+						</div>
+						<div id="alertNumber" class="invalidNumber">
+							<p>Сумма должно быть больше нуля!</p>
+						</div>
+					</div>
+				</div>
+				<div class="progressBar">
+					<span id="percentages" class="numProgress">0%</span>
+					<span id="thereIs" class="thereIs">0</span>/<span class="need">3600</span>
+				</div>
+			</div>
+			<div id="footer" class="footer">
+				<div class="completed">
+					<h2>Копилка заполнена!</h2>
+					<p>Даже на бензин хватит</p>
+					<a class="choiceButton" href="https://kolesa.kz/cars/body-coupe/bmw/3-series/almaty/?price[to]=1+500+000">Выбрать автомобиль</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
